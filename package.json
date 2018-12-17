@@ -1,0 +1,49 @@
+{
+  "name": "k15-exam",
+  "version": "1.0.0",
+  "description": "develop project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp develop",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrey28282/k15-exam.git"
+  },
+  "keywords": [],
+  "author": "andrey28282",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrey28282/k15-exam/issues"
+  },
+  "homepage": "https://github.com/andrey28282/k15-exam#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "autoprefixer": "^9.4.2",
+    "browser-sync": "^2.26.3",
+    "css-mqpacker": "^7.0.0",
+    "eslint-config-wezom-relax": "^1.0.3",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0-beta.2",
+    "gulp-changed": "^3.2.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-htmlhint": "^2.2.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
+    "happiness-scss-config": "^1.0.1",
+    "normalize.css": "^8.0.1",
+    "postcss-import": "^12.0.1",
+    "sort-css-media-queries": "^1.4.3"
+  }
+}
