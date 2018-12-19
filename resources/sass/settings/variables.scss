@@ -5,19 +5,30 @@ $title: #073d79;
 $table_text: #043567;
 $color_hover: #2e2d2d;
 $color_active: #151313;
+$color_search: #bfbeda;
+$description_video_color: #0a274d;
+$link_hover: #0d7b37;
+$link_active: #088437;
+$scope:#00bb63;
+$table-text: #043567;
 
 @mixin flex-center {
     justify-content: center;
     align-items: center;
 }
 
-ul{
-    padding:0;
-    margin:0;
-    list-style: none;
+@mixin title($weight){
+    font-size: 30px;
+    text-transform: uppercase;
+    color: $title;
+    font-family: 'EuropeExt';
+    font-weight: $weight;
 }
 
-body{
-    font-family: Arial, sans-serif;
+@mixin title_2($weight){
+    font-size: 30px;
+    text-transform: uppercase;
+    color: $navbar;
+    font-family: 'EuropeExt';
+    font-weight: $weight;
 }
-
