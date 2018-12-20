@@ -101,6 +101,11 @@
     line-height: 24px;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    transition: 200ms;
+}
+
+.contacts__social-link:hover{
+    opacity: 0.8;
 }
 
 .contacts__social-link--in{
@@ -112,6 +117,13 @@
 .contacts__social-link--vk{
     background-image: url('/static/img/vk__green.svg');
     margin-right: 0px;
+}
+
+.contacts__link{
+    transition: 200ms;
+}
+.contacts__link:hover{
+    color: $table_text;
 }
 
 
@@ -229,6 +241,7 @@
     z-index: -1;
     padding-top: 30px;
     padding-bottom: 75px;
+    min-height: 700px; 
 
     &__title{
         @include title(bold);
@@ -422,9 +435,10 @@
 
 
 .section-characteristic{
-    background: url('/static/img/residence_01.jpg') left 220px no-repeat,
-    url('/static/img/penopolistirol_rotate.png') right bottom no-repeat,
-    url('/static/img/residence_02.jpg') right 220px no-repeat;
+    min-height: 800px; 
+    background: url('/static/img/residence_01.jpg') left 155px no-repeat,
+    url('/static/img/penopolistirol_rotate.png') right 450px no-repeat,
+    url('/static/img/residence_02.jpg') right 155px no-repeat;
 
     &__item{
         display: block;
@@ -509,9 +523,211 @@
 
 
 .section-task{
+    background: url('/static/img/task_1.png') left top no-repeat ,
+    url('/static/img/task_2.png') right top no-repeat;
+    padding-bottom: 52px;
+
    &__title{
         @include title_2(bold);
         text-align: center;
+    }
+    &__list{
+        margin: 0 auto;
+        max-width: 980px;
+    }
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        min-height: 40px;
+        margin-top: 6px;
+    }
+    &__text{
+        font-size: 14px;
+        color: $background;
+        margin: 0;
+        padding-top: 12px;
+        min-height: 40px;
+        box-sizing: border-box;
+    }
+    &__item &__text:nth-child(1){
+       padding-left: 70px;
+       background-color: $task-red;
+       background-image: url('/static/img/smile_no-ok.png');
+       background-repeat: no-repeat;
+       background-position:20px 5px;
+       width:100%;
+       max-width: 372px;
+       box-shadow: -48px 0 0 rgba(255,0,0,0.45),-96px 0 0 rgba(255,0,0,0.40);
+    }
+    &__item &__text:nth-child(2){
+       padding-left: 70px;
+       background-color: $navbar;
+       background-image: url('/static/img/smile_ok.png');
+       background-repeat: no-repeat;
+       background-position:20px 5px;
+       width:100%;
+       max-width: 600px;
+       box-shadow: 48px 0 0 rgba(1,152,59,0.45),96px 0 0 rgba(1,152,59,0.40);
+    }
+    &__container{
+        max-width: 1225px;
+        margin: 0 auto;
+    }
+
+    &__text--padding{
+        padding-bottom: 12px;
+    }
+}
+
+
+.section-certificates{
+     text-align: center;
+     padding-bottom: 45px;
+
+    &__container{
+        margin: 0 auto;
+        max-width: 980px;
+    }
+    &__title{
+        text-align: center;
+        @include title(bold);
+    }
+    &__list{
+        display: flex;
+    }
+    &__item{
+        margin: 0 20px;
+    }
+    &__name-premium{
+       display: block;
+       margin-top: 32px;
+       font-size: 24px;
+       text-transform: uppercase;
+       color: $contacts_text;
+    }
+    &__img-premium{
+       display: block;
+       margin-top: 32px;
+       margin-left: auto;
+       margin-right: auto;
+    }
+}
+
+.section-contacts{
+    &__container{
+        max-width: 980px;
+        height: 200px;
+        border: 1px solid transparent;
+        margin: 0 auto;
+        text-align: center;
+        background-color: $navbar;
+        background-image: url('/static/img/pattern.png');
+        background-repeat: repeat;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5),inset 0px 3px 0px 0px rgba(255, 255, 255, 0.2);
+    }
+
+    &__title{
+        margin-top: 38px;
+        font-family: EuropeExt;
+        font-weight: bold;
+        color: $background;
+        text-transform: uppercase;
+    }
+    &__link-block{
+        max-width: 360px;
+        font-size: 14px; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__address-text{
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        color: $background;
+    }
+    &__link{
+        color: $background;
+        text-decoration: none;
+    }
+
+    &__maps-block{
+        position: relative;
+        margin-top: -40px;
+        z-index: -1;
+    }
+
+    &__maps{
+        width:100%;
+    }
+}
+
+.footer{
+    position: relative;
+    height: 312px;
+    padding-top: 25px;
+    background-color: $navbar;
+    background: url('/static/img/NOVABOARD__footer.png')center center/100% 100% no-repeat,
+    url('/static/img/pattern.png') no-repeat;
+    color: $background;
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+    &__logo-link{
+        display: block;
+        max-width: 335px;
+        height: 75px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5px;
+    }
+
+    &__logo-img{
+        width: 100%;
+    }
+
+    &__link{
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        margin-top: 8px;
+    }
+
+    &__link--in{
+        background-image: url('/static/img/in__white.svg');
+    }
+
+    &__link--vk{
+        background-image: url('/static/img/vk__white.svg');
+    }
+
+    &__studio-name{
+        position: absolute;
+        left:0;
+        right:0;
+        margin: 0 auto;
+        bottom: 22px;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    &__container-text{
+        max-width: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+    }
+
+    &__studio-link{
+        color: $background;
+        text-decoration: none;
+    }
+
+    &__item{
+        display: inline;
+        font-size: 12px;
     }
 }
 
