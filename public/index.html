@@ -70,14 +70,23 @@
 		</nav>
 		<section class="slider">
 			<h2 class="visually-hidden">Слайдер</h2>
-			<div class="owl-carousel owl-theme">
-				<div class="item">
-					<h4>1</h4>
+			<div class="owl-carousel owl-theme owl-nav slider__block">
+				<div class="item slider__item" >
+					<img class="slider__img" src="/static/img/slider_1.jpg" alt="" width="320">
+					<div class="slider__slide-block">
+						<p class="slider__slide-text">сегодня инновация -<br>завтра необходимость</p>
+						<h3 class="slider__slide-title">энергосбережение нового поколения</h3>
+					</div>
 				</div>
-				<div class="item">
-					<h4>2</h4>
+				<div class="item slider__item">
+					<img class="slider__img" src="/static/img/slider_2.jpg" alt="" width="320">
+					<div class="slider__slide-block">
+						<p class="slider__slide-text">сегодня инновация -<br>завтра необходимость</p>
+						<h3 class="slider__slide-title">энергосбережение нового поколения</h3>
+					</div>
 				</div>
 			</div>
+				<div class="owl-dots"></div>
 		</section>	
 	</header>
 	<main>
@@ -414,17 +423,13 @@
 			loop: true,
 			margin: 10,
 			nav: true,
-			responsive: {
-				0: {
-					items: 1
-				},
-				600: {
-					items: 3
-				},
-				1000: {
-					items: 5
-				}
-			}
+			dots: true,
+			items: 1,
+			autoplay: true,
+			autoplayTimeout: 4500,
+			navContainer: '.owl-nav',
+			dotsContainer: '.owl-dots',
+			navText:''
 		})
 	</script>
 </body>

@@ -1,7 +1,6 @@
 @import 'normalize.css';
 @import 'lib/jquery.fancybox.min.css';
 @import 'lib/owl.carousel.min.css';
-@import 'lib/owl.theme.default.min.css';
 @import 'settings/variables';
 @import 'settings/fonts';
 @import 'common/common';
@@ -157,6 +156,51 @@
     margin-right: auto;
     margin-top: 17px;
     box-shadow: 0 75px 155px -55px #07254a;
+
+    &__img{
+        max-width: 100%;
+        height: auto;
+    }	
+
+    &__block{
+        position: relative;
+    }
+
+    &__item{
+        position: relative;
+    }
+
+    &__slide-block{
+        position: absolute;
+        bottom: 35px;
+        left: 0;
+        padding-left: 25px;
+        padding-bottom: 10px;
+        max-width: 770px;
+        width: 80%;
+        height: 140px;
+        background-color: rgba(0, 0, 0, 0.36);
+    }
+
+    &__slide-text{
+        font-size: 30px;
+        font-family: EuropeExt;
+        font-weight: normal;
+        text-transform: uppercase;
+        color: $background;
+        margin-top: 40px;
+        margin-bottom: 0px;
+    }
+
+    &__slide-title{
+        text-transform: uppercase;
+        color: $background;
+        font-weight: normal;
+        font-family: EuropeExt;
+        font-size: 24px;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
 }
 
 
