@@ -29,7 +29,8 @@
 </head>
 <body>
 	<header class="header">
-		<nav class="nav">
+		<a class="link-skip" href="#start-of-content" tabindex="1">Перейти к контенту страницы</a>
+		<nav class="nav" aria-label="Основное меню">
 			<ul class="nav__list">
 				<li class="nav__item"><a class="nav__link nav__link--active" href="#" title="">Главная</a></li>
 				<li class="nav__item"><a class="nav__link" href="#" title="">О компании</a></li>
@@ -48,7 +49,7 @@
 					<div class="contacts">
 						<p class="contacts__container contacts__container--social">
 							<span class="contacts__item">мы в социальных сетях</span>
-							<a class="contacts__social-link contacts__social-link--in" href="//vk.com/wezom" title=""><span class="visually-hidden">In</span></a>
+							<a id="#start-of-content" class="contacts__social-link contacts__social-link--in" href="//vk.com/wezom" title=""><span class="visually-hidden">In</span></a>
 							<a class="contacts__social-link contacts__social-link--vk" href="//www.instagram.com/wezom_company/" title=""><span class="visually-hidden">VK</span></a>
 						</p>
 						<p class="contacts__container contacts__container--other">
@@ -60,8 +61,8 @@
 					</div>
 					<div class="search">
 						<form class="search__form" action="">
-							<input class="search__input" type="search">
-							<button type="submit" class="search__submit"><span class="visually-hidden">Поиск</span></button>
+							<input class="search__input" type="search" aria-label="Поиск по сайту">
+							<button type="submit" class="search__submit" title="Поиск"><span class="visually-hidden">Поиск</span></button>
 						</form>
 					</div>
 				</div>
@@ -69,6 +70,14 @@
 		</nav>
 		<section class="slider">
 			<h2 class="visually-hidden">Слайдер</h2>
+			<div class="owl-carousel owl-theme">
+				<div class="item">
+					<h4>1</h4>
+				</div>
+				<div class="item">
+					<h4>2</h4>
+				</div>
+			</div>
 		</section>	
 	</header>
 	<main>
@@ -169,13 +178,13 @@
 					<table class="section-characteristic__table">
 						<thead class="section-characteristic__table-title">
 							<tr class="section-characteristic__table-title-line">
-								<th class="section-characteristic__table-title-item section-characteristic__table-title-item--left">ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ</th>
-								<th class="section-characteristic__table-title-item">НОРМАТИВ</th>
-								<th class="section-characteristic__table-title-item">ПСБ - 20</th>
-								<th class="section-characteristic__table-title-item">ПСБ- 30</th>
-								<th class="section-characteristic__table-title-item">ПСБ- 40</th>
-								<th class="section-characteristic__table-title-item">ПСБ- 50</th>
-								<th class="section-characteristic__table-title-item">ПСБ- 60-120</th>
+								<th scope="col" class="section-characteristic__table-title-item section-characteristic__table-title-item--left">ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ</th>
+								<th scope="col" class="section-characteristic__table-title-item">НОРМАТИВ</th>
+								<th scope="col" class="section-characteristic__table-title-item">ПСБ - 20</th>
+								<th scope="col" class="section-characteristic__table-title-item">ПСБ- 30</th>
+								<th scope="col" class="section-characteristic__table-title-item">ПСБ- 40</th>
+								<th scope="col" class="section-characteristic__table-title-item">ПСБ- 50</th>
+								<th scope="col" class="section-characteristic__table-title-item">ПСБ- 60-120</th>
 							</tr>
 						</thead>
 						<tbody class="section-characteristic__table-content">
@@ -341,11 +350,31 @@
 					<img class="section-characteristic__item section-video__item" src="/static/img/Novaboard.png" alt="" width="320">
 					<h2 class="section-certificates__title">сертификаты качества И ПРЕМИИ</h2>
 					<ul class="section-certificates__list">
-						<li class="section-certificates__item"><img class="section-certificates__img" src="/static/img/sertificate1.jpg" alt="" width="155" height="220"></li>
-						<li class="section-certificates__item"><img class="section-certificates__img" src="/static/img/sertificate2.jpg" alt="" width="155" height="220"></li>
-						<li class="section-certificates__item"><img class="section-certificates__img" src="/static/img/sertificate3.jpg" alt="" width="155" height="220"></li>
-						<li class="section-certificates__item"><img class="section-certificates__img" src="/static/img/sertificate3.jpg" alt="" width="155" height="220"></li>
-						<li class="section-certificates__item"><img class="section-certificates__img" src="/static/img/sertificate3.jpg" alt="" width="155" height="220"></li>
+						<li class="section-certificates__item">
+							<a href="/static/img/sertificate1.jpg" data-fancybox="gallery" data-caption="Сертификат #1" title="Нажмите для просмотра">
+								<img class="section-certificates__img" src="/static/img/sertificate1.jpg" alt="" width="155" height="220">
+							</a>
+						</li>
+						<li class="section-certificates__item">
+							<a href="/static/img/sertificate2.jpg" data-fancybox="gallery" data-caption="Сертификат #2" title="Нажмите для просмотра">
+								<img class="section-certificates__img" src="/static/img/sertificate2.jpg" alt="" width="155" height="220">
+							</a>
+						</li>
+						<li class="section-certificates__item">
+							<a href="/static/img/sertificate3.jpg" data-fancybox="gallery" data-caption="Сертификат #3" title="Нажмите для просмотра">
+								<img class="section-certificates__img" src="/static/img/sertificate3.jpg" alt="" width="155" height="220">
+							</a>
+						</li>
+						<li class="section-certificates__item">
+							<a href="/static/img/sertificate3.jpg" data-fancybox="gallery" data-caption="Сертификат #4" title="Нажмите для просмотра">
+								<img class="section-certificates__img" src="/static/img/sertificate3.jpg" alt="" width="155" height="220">
+							</a>
+						</li>
+						<li class="section-certificates__item">
+							<a href="/static/img/sertificate3.jpg" data-fancybox="gallery" data-caption="Сертификат #5" title="Нажмите для просмотра">
+								<img class="section-certificates__img" src="/static/img/sertificate3.jpg" alt="" width="155" height="220">
+							</a>
+						</li>
 					</ul>
 					<b class="section-certificates__name-premium">Премия:<br>100 лучших товаров Украины 2010 и 2011</b>
 					<img class="section-certificates__img-premium" src="/static/img/top100.png" alt="" width="110" height="95">
@@ -380,5 +409,23 @@
 		<p class="footer__studio-name"><a class="footer__studio-link" href="//wezom.com.ua">Разработка сайта — студия WEZOM</a></p>
 	</footer>
 	<script src="/assets/js/bundle.js"></script>
+	<script>
+		$('.owl-carousel').owlCarousel({
+				loop: true,
+				margin: 10,
+				nav: true,
+				responsive: {
+					0: {
+						items: 1
+					},
+					600: {
+						items: 3
+					},
+					1000: {
+						items: 5
+					}
+				}
+			})
+	</script>
 </body>
 </html>

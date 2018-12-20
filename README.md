@@ -1,6 +1,6 @@
-# k15-exam
+# NOVABOARD
 
 ---
 
-> Задание и материалы для выполнения - смотрите на странице курса  
+> Тестовый проект
 > http://kursy-html.wezom.net/k15/training-16.html

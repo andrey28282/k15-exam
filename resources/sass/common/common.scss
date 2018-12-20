@@ -19,3 +19,24 @@ body{
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+
+.link-skip {
+    transition:200ms; 
+    top: 0px; 
+    text-align: center; 
+    color: rgb(255, 255, 255); 
+    padding-top: 15px; 
+    padding-bottom: 15px; 
+    display: block; 
+    position: absolute; 
+    z-index: -1; 
+    opacity: 0;
+}
+.link-skip:focus {
+    width: 150px; 
+    height: 50px; 
+    z-index: 3; 
+    opacity: 1; 
+    background-color: rgba(0, 0, 0, 0.85);
+}
