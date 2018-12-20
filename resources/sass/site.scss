@@ -14,6 +14,10 @@
 }
 
 .nav {
+   &__toggle{
+        display:none;
+    }
+
    &__list {
         min-height: 78px;
         background-color: $navbar;
@@ -150,8 +154,7 @@
 
 .slider{
     max-width: 980px;
-    background-color: dimgrey;
-    height: 492px;
+    max-height: 492px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 17px;
@@ -301,6 +304,7 @@
         max-width: 1224px;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     &__title-card{
@@ -323,6 +327,7 @@
         width: 607px;
         height: 308px;
         color: $background;
+        margin-bottom: 15px;
     }
 
     &__card--one{
@@ -345,6 +350,7 @@
         display: flex;
         flex-wrap: wrap;
         margin-top: 58px;
+        justify-content: center;
     }
 
     &__list .list-scope:nth-child(2n){
@@ -484,9 +490,9 @@
 
 .section-characteristic{
     min-height: 800px; 
-    background: url('/static/img/residence_01.jpg') left 155px no-repeat,
+    background: url('/static/img/residence_01.jpg') left 225px no-repeat,
     url('/static/img/penopolistirol_rotate.png') right 450px no-repeat,
-    url('/static/img/residence_02.jpg') right 155px no-repeat;
+    url('/static/img/residence_02.jpg') right 225px no-repeat;
 
     &__item{
         display: block;
@@ -502,6 +508,7 @@
         margin-left: auto;
         margin-right: auto;
         background-color: rgba(255, 255, 255 ,0.60);
+        overflow-x:scroll;
     }
 
     &__table{
@@ -779,3 +786,92 @@
         font-size: 12px;
     }
 }
+
+
+@media screen and (max-width:1220px){
+
+    .nav{
+        &__list{
+            position: absolute;
+            transform: translateY(-800px);
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            z-index: 9999;
+            transition: 400ms;
+          }
+
+        &__item{
+            margin-right: 0px;
+          }
+        &__inner {
+            max-width: 900px;
+         }
+
+         &__toggle{
+             display: block;
+             position: absolute;
+             left: 0;
+             right: 0;
+             top: -45px;
+             margin-left: auto;
+             margin-right: auto;
+             background-color: rgba(160, 160, 160, 0.2);
+             opacity: 0.8;
+             border: none;
+             width: 35px;
+             height: 120px;
+             background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAfCAMAAADQkB38AAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+nhxg7wAAAARnQU1BAACxjwv8YQUAAAABc1JHQgCuzhzpAAAA9lBMVEUAAAAUFBR7e3tERERPT092dnbMzMxbW1sAAACBgYGioqLr6+tkZGSsrKw9PT1/f39WVlanp6cUFBTd3d1aWlpkZGSIiIgJCQleXl5FRUVRUVHg4OBWVlbb29tmZmZZWVldXV1eXl4UFBQAAACpqanBwcEVFRVTU1NGRkZgYGBXV1dGRkajo6NTU1N/f39QUFCVlZVdXV0AAABXV1dNTU2rq6sAAAAYGBiGhoZhYWEODg6SkpISEhLo6Oi/v7+9vb2urq4XFxf29vadnZ1QUFC6urrJyckAAABhYWEWFhZ5eXkXFxcEBATj4+NZWVnf39+mpqYAAAAD+hXWAAAAUXRSTlMA6kqwnk4TneY0PQOMTLhfoRroGp+ZT/KYrFEXnReUoZ1N3/ElOOCisZyco02dTaAamumgmxnv5GOY5SbjFyYcS88JSKMaE/KU42/q6B6dFh1eTLqmAAAAvElEQVQoz2XS124CUQwE0AsBlk7ovYYk9A6h997v//8MQTvIa3YejyxZtkYIIeL9pdDlQ+51FpVSpjg53PKZJsOjVDNgWoYGmXagCtM6NMN0DS0yNUHTTNvQANMq9JOpAk0wvUJLTCPQX6YFqFNj32HVejayOeasGzIXbNglq8DOXrIarDUjy8IMd7LYa0eDLATz+cmMsNOFzAz7m5B5YIek5riVauMbe8No928/27fa5L9kzqIrk30x5fAA/AJFWyBFYEsAAAAASUVORK5CYII=');
+             background-repeat: no-repeat;
+             background-position: center;
+             transform: rotate(90deg);
+             border-radius: 0 15px 15px 0px;
+             transition: 400ms;
+             cursor: pointer;
+            }
+
+            &__toggle-touch{
+                transform: rotate(-90deg);
+            }
+    }
+
+    .section-scope{
+        &__list .list-scope:nth-child(2n){
+            margin-bottom: 50px;
+        }
+
+        &__list{
+            max-width: 600px;
+        }
+    }
+
+    .section-certificates__list {
+        justify-content: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .section-certificates__item {
+        margin: 10px 20px;
+    }
+
+    .owl-prev{
+        right: 0;
+        z-index: 1;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    
+    .owl-next{
+        left: 0;
+        z-index: 1;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .footer {
+        position: relative;
+        height: 220px;
+    }
+}
+
