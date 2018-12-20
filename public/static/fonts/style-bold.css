@@ -1,9 +1,0 @@
-/* font converted using font-converter.net. thank you! */
-@font-face {
-  font-family: "EuropeExtBold";
-
-  src: url("./fonts/EuropeExtBold.woff") format("woff"), /* Modern Browsers */
-    url("./fonts/EuropeExtBold.woff2") format("woff2"); /* Modern Browsers */
-  font-weight: normal;
-  font-style: normal;
-}
